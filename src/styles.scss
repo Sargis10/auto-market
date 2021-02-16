@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "mixins";
+
+body {
+  background-color: $body-background;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  @include make-container();
+  position: relative;
+  width: $container-width;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+  padding: 20px 35px;
+  border: none;
+  border-radius: 5px;
+}
+
+.w-100 {
+  width: 100%;
+}
