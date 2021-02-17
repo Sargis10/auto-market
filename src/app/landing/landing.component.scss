@@ -1,9 +1,13 @@
+@import "../../variables";
+
+// Header section style start
 .header-section {
   height: 100vh;
   background-image: url('/assets/images/audi.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 
   .header-container {
     display: flex;
@@ -42,23 +46,62 @@
         }
       }
     }
+    .action-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      mat-icon {
+        margin-right: 20px;
+      }
+
+      a {
+        color: #000;
+        font-size: 16px;
+        font-weight: normal;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+    }
   }
 
   .search-section {
     display: flex;
-    align-items: center;
-    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .sub-title {
       text-align: center;
       font-size: 26px;
       font-weight: bold;
+      line-height: 50px;
     }
 
-    .title {
+    .main-title {
       text-align: center;
       font-size: 67px;
       font-weight: bold;
+      padding: 55px;
+    }
+
+    .select-inputs {
+      display: flex;
+      margin-top: 30px;
+
+      select {
+        font-size: 20px;
+        padding: 10px 40px 10px 40px;
+        background-color: #fff;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid grey;
+      }
     }
   }
 
@@ -71,4 +114,284 @@
     background-color: rgba(#f4f4f4, 0.8);
     z-index: 0;
   }
+}
+// Header section style end
+
+// Market status section style start
+
+.market-status-section {
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+}
+// Market status section style end
+
+// Continue search section style start
+.continue-search-section {
+  margin-top: 100px;
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+  }
+  .cards-slider {
+    .card {
+      max-width: 173px;
+      .card-img {
+        width: 173px;
+        height: 130px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .card-body {
+        height: 60px;
+        div {
+          text-align: center;
+          padding-top: 5px;
+        }
+        &-km {
+          color: lightgrey;
+          font-size: 18px;
+        }
+        &-price {
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+      .card-link {
+        a {
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+// Continue search section style end
+
+// Best offers section style start
+.best-offers-slider {
+  margin-top: 30px;
+
+  .card {
+    width: 270px;
+    height: 300px;
+    transition: height 1s;
+    overflow: hidden;
+    cursor: pointer;
+
+    .card-img {
+      width: 270px;
+      height: 200px;
+      background-size: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding-top: 20px;
+    }
+
+    .card-body {
+      height: 80px;
+
+      div {
+        padding-left: 20px;
+      }
+
+      &-year {
+        color: lightgrey;
+        font-size: 18px;
+      }
+
+      &-model {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 10px;
+      }
+    }
+    .card-link {
+      border-top: 1px solid lightgrey;
+
+      a {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      height: 374px;
+    }
+  }
+}
+// Best offers section style end
+
+// Body type section and popular makes section style start
+.body-type-section {
+  margin-top: 100px;
+
+  .body-type-heading {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  .cards-slider {
+    margin-top: 20px;
+
+    .card {
+      max-width: 173px;
+
+      .card-img {
+        width: 173px;
+        height: 130px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card-body {
+        height: 60px;
+
+        div {
+          text-align: center;
+          font-weight: bold;
+          padding-top: 5px;
+        }
+
+        &-km {
+          color: lightgrey;
+          font-size: 18px;
+        }
+
+        &-price {
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+// Body type section and popular makes section style end
+
+// Popular section style start
+.popular-section {
+  margin-top: 100px;
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+
+    select {
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      background-color: $body-background;
+    }
+  }
+}
+// Popular section style end
+
+.hr {
+  width: 100%;
+  border: 1px solid darkgray;
+  margin-top: 45px;
+}
+
+// Footer section style start
+.footer {
+  display: flex;
+  flex: 0 0 20%;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  div {
+    max-width: 20%;
+  }
+
+  .logo {
+    font-weight: bold;
+    padding-top: 22px;
+  }
+
+  .footer-navbar {
+      list-style: none;
+
+      .nav-item {
+        color: #000;
+        line-height: 35px;
+        cursor: pointer;
+
+        &.active {
+          color: #000;
+          font-weight: bold;
+          border-bottom: 2px solid orangered;
+        }
+      }
+
+  }
+  .play-market-logo {
+    padding-top: 22px;
+
+    & > div {
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 202px;
+      height: 70px;
+    }
+
+    .languages-select {
+      .flag-img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .languages {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 202px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #fff;
+        padding: 12px 35px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// Footer section style end
+
+.rights {
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: lightgrey;
+  }
+}
+
+.language-item {
+  margin-right: 16px;
+  vertical-align: middle;
 }

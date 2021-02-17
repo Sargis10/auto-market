@@ -1,0 +1,43 @@
+@import "../../../variables";
+
+.sliderContent {
+  margin-top: 50px;
+  .mainImg {
+    width: $maxWidth;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 5px 10px lightgray;
+    border-radius: 10px;
+  }
+  .circle {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    ul {
+      position: relative;
+      list-style-type: none;
+      transition: $transition;
+      display: flex;
+      justify-content: center;
+      li {
+        cursor: pointer;
+        margin: 10px;
+        div {
+          position: relative;
+          width: 10px;
+          height: 10px;
+          opacity: 0.5;
+          transition: $transition;
+          border-radius: 100%;
+          background-color: #a3a3a3;
+        }
+        div.active {
+          background-color: #ec4e13;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

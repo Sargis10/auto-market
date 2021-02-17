@@ -1,0 +1,10 @@
+<div class="sliderContent">
+  <img src="{{ imgMiddle.src }}" alt="" class="mainImg">
+  <div class="circle">
+    <ul>
+      <li *ngFor="let img of data, let i = index">
+        <div (click)="changeImg(img)" [ngClass]="{'active': i === imgMiddle.id}"></div>
+      </li>
+    </ul>
+  </div>
+</div>
